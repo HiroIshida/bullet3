@@ -128,6 +128,7 @@ struct btDbvtTreeCollider : btDbvt::ICollide
 //
 
 //
+void fuck(){};
 btDbvtBroadphase::btDbvtBroadphase(btOverlappingPairCache* paircache)
 {
 	m_deferedcollide = false;
@@ -184,6 +185,7 @@ btBroadphaseProxy* btDbvtBroadphase::createProxy(const btVector3& aabbMin,
 																				   collisionFilterGroup,
 																				   collisionFilterMask);
 
+    fuck();
 	btDbvtAabbMm aabb = btDbvtVolume::FromMM(aabbMin, aabbMax);
 
 	//bproxy->aabb			=	btDbvtVolume::FromMM(aabbMin,aabbMax);
