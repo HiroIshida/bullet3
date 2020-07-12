@@ -1,0 +1,765 @@
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenGL: //usr/lib/x86_64-linux-gnu/libGL.so   
+-- Found PythonInterp: /home/hiro/.pyenv/versions/3.7.7/bin/python3 (found version "3.7.7") 
+-- Looking for versions: 3.7.7;3.7
+-- Looking for python version '3.7.7' by checking executables: /home/hiro/.pyenv/versions/3.7.7/bin/python3;python;python3;python3.7.
+-- Found executable /home/hiro/.pyenv/versions/3.7.7/bin/python3 with suitable version 3.7.7
+-- Found PythonLibs: /home/hiro/.pyenv/versions/3.7.7/lib/libpython3.7m.a (found suitable exact version "3.7.7") 
+-- Found PythonLibs: /home/hiro/.pyenv/versions/3.7.7/lib/libpython3.7m.a (found version "3.7.7") 
+-- Found NumPy: /home/hiro/.pyenv/versions/3.7.7/lib/python3.7/site-packages/numpy/core/include (found version "1.19.0") 
+-- NumPy ver. 1.19.0 found (include: /home/hiro/.pyenv/versions/3.7.7/lib/python3.7/site-packages/numpy/core/include)
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hiro/documents/bullet3/build
+Scanning dependencies of target Bullet3Common
+Scanning dependencies of target BussIK
+Scanning dependencies of target LinearMath
+[  0%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/Jacobian.o
+[  0%] Building CXX object src/Bullet3Common/CMakeFiles/Bullet3Common.dir/b3AlignedAllocator.o
+[  0%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btAlignedAllocator.o
+Scanning dependencies of target gwen
+[  1%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Anim.o
+[  1%] Building CXX object src/Bullet3Common/CMakeFiles/Bullet3Common.dir/b3Vector3.o
+[  1%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btConvexHull.o
+[  1%] Building CXX object src/Bullet3Common/CMakeFiles/Bullet3Common.dir/b3Logging.o
+[  1%] Linking CXX shared library libBullet3Common.so
+[  1%] Built target Bullet3Common
+Scanning dependencies of target clsocket
+[  1%] Building CXX object examples/ThirdPartyLibs/clsocket/CMakeFiles/clsocket.dir/src/SimpleSocket.o
+[  1%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/BaseRender.o
+[  1%] Building CXX object examples/ThirdPartyLibs/clsocket/CMakeFiles/clsocket.dir/src/ActiveSocket.o
+[  1%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/LinearR2.o
+[  1%] Building CXX object examples/ThirdPartyLibs/clsocket/CMakeFiles/clsocket.dir/src/PassiveSocket.o
+[  1%] Linking CXX static library libclsocket.a
+[  1%] Built target clsocket
+Scanning dependencies of target App_obj2sdf
+[  2%] Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.o
+[  2%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/LinearR3.o
+[  2%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btConvexHullComputer.o
+[  2%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Base.o
+[  2%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/LinearR4.o
+[  3%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/MatrixRmn.o
+[  3%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/Misc.o
+[  3%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Button.o
+[  3%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/Node.o
+[  3%] Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o
+[  3%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btGeometryUtil.o
+[  3%] Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o
+[  3%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/Tree.o
+[  3%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btPolarDecomposition.o
+[  4%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btQuickprof.o
+[  4%] Building CXX object examples/ThirdPartyLibs/BussIK/CMakeFiles/BussIK.dir/VectorRn.o
+[  4%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btReducedVector.o
+[  4%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Canvas.o
+[  4%] Linking CXX shared library libBussIK.so
+[  4%] Built target BussIK
+Scanning dependencies of target HACD
+[  4%] Building CXX object Extras/HACD/CMakeFiles/HACD.dir/hacdGraph.o
+[  4%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/CheckBox.o
+[  5%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ColorControls.o
+[  5%] Building CXX object Extras/HACD/CMakeFiles/HACD.dir/hacdHACD.o
+[  5%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ColorPicker.o
+[  5%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btSerializer.o
+[  5%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btSerializer64.o
+[  5%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btThreads.o
+[  5%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/btVector3.o
+[  5%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/TaskScheduler/btTaskScheduler.o
+[  6%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/TaskScheduler/btThreadSupportPosix.o
+[  6%] Building CXX object src/LinearMath/CMakeFiles/LinearMath.dir/TaskScheduler/btThreadSupportWin32.o
+[  6%] Linking CXX shared library libLinearMath.so
+[  6%] Built target LinearMath
+Scanning dependencies of target Bullet3Geometry
+[  7%] Building CXX object src/Bullet3Geometry/CMakeFiles/Bullet3Geometry.dir/b3ConvexHullComputer.o
+[  7%] Linking CXX executable App_obj2sdf
+[  7%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ComboBox.o
+[  7%] Built target App_obj2sdf
+Scanning dependencies of target Bullet2FileLoader
+[  7%] Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.o
+[  7%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/CrossSplitter.o
+[  7%] Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.o
+[  7%] Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.o
+[  7%] Building CXX object Extras/HACD/CMakeFiles/HACD.dir/hacdICHull.o
+[  7%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Dialog/FileOpen.o
+[  8%] Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.o
+[  8%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Dialog/FileSave.o
+[  8%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Dialog/Query.o
+[  8%] Building CXX object Extras/HACD/CMakeFiles/HACD.dir/hacdManifoldMesh.o
+[  8%] Building CXX object src/Bullet3Geometry/CMakeFiles/Bullet3Geometry.dir/b3GeometryUtil.o
+[  9%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/DockBase.o
+[  9%] Linking CXX shared library libBullet3Geometry.so
+[  9%] Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Serializer.o
+[  9%] Built target Bullet3Geometry
+[  9%] Linking CXX shared library libBullet2FileLoader.so
+Scanning dependencies of target BulletCollision
+[ 10%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.o
+[ 10%] Built target Bullet2FileLoader
+Scanning dependencies of target OpenGLWindow
+[ 10%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o
+[ 10%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/DockedTabControl.o
+[ 11%] Linking CXX shared library libHACD.so
+[ 11%] Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o
+[ 11%] Built target HACD
+Scanning dependencies of target BulletInverseDynamics
+[ 11%] Building CXX object src/BulletInverseDynamics/CMakeFiles/BulletInverseDynamics.dir/IDMath.o
+[ 11%] Building CXX object src/BulletInverseDynamics/CMakeFiles/BulletInverseDynamics.dir/MultiBodyTree.o
+[ 11%] Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o
+[ 11%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Dragger.o
+[ 12%] Building CXX object src/BulletInverseDynamics/CMakeFiles/BulletInverseDynamics.dir/details/MultiBodyTreeInitCache.o
+[ 12%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/GroupBox.o
+[ 12%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o
+[ 12%] Building CXX object src/BulletInverseDynamics/CMakeFiles/BulletInverseDynamics.dir/details/MultiBodyTreeImpl.o
+[ 13%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o
+[ 13%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o
+[ 13%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/HSVColorPicker.o
+[ 13%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/HorizontalScrollBar.o
+[ 13%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.o
+[ 13%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.o
+[ 13%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o
+[ 13%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/HorizontalSlider.o
+[ 13%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o
+[ 13%] Linking CXX shared library libBulletInverseDynamics.so
+[ 13%] Built target BulletInverseDynamics
+Scanning dependencies of target BulletFileLoader
+[ 14%] Building CXX object Extras/Serialize/BulletFileLoader/CMakeFiles/BulletFileLoader.dir/bChunk.o
+[ 14%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o
+[ 14%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.o
+[ 14%] Building CXX object Extras/Serialize/BulletFileLoader/CMakeFiles/BulletFileLoader.dir/bDNA.o
+[ 15%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ImagePanel.o
+[ 15%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.o
+[ 15%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.o
+[ 15%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Label.o
+[ 15%] Building CXX object Extras/Serialize/BulletFileLoader/CMakeFiles/BulletFileLoader.dir/bFile.o
+[ 16%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o
+[ 16%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/LabelClickable.o
+[ 16%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o
+[ 16%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ListBox.o
+[ 16%] Building CXX object Extras/Serialize/BulletFileLoader/CMakeFiles/BulletFileLoader.dir/btBulletFile.o
+[ 16%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o
+[ 16%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Menu.o
+[ 16%] Linking CXX shared library libBulletFileLoader.so
+[ 16%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.o
+[ 16%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.o
+[ 16%] Built target BulletFileLoader
+Scanning dependencies of target Bullet3Collision
+[ 16%] Building CXX object src/Bullet3Collision/CMakeFiles/Bullet3Collision.dir/BroadPhaseCollision/b3DynamicBvh.o
+[ 16%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o
+[ 16%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/MenuItem.o
+[ 16%] Building CXX object src/Bullet3Collision/CMakeFiles/Bullet3Collision.dir/BroadPhaseCollision/b3DynamicBvhBroadphase.o
+[ 17%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/MenuStrip.o
+[ 17%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.o
+[ 17%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/NumericUpDown.o
+[ 17%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.o
+[ 18%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.o
+[ 18%] Building CXX object src/Bullet3Collision/CMakeFiles/Bullet3Collision.dir/BroadPhaseCollision/b3OverlappingPairCache.o
+[ 18%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/PanelListPanel.o
+[ 18%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ProgressBar.o
+[ 18%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o
+[ 19%] Building CXX object src/Bullet3Collision/CMakeFiles/Bullet3Collision.dir/NarrowPhaseCollision/b3ConvexUtility.o
+[ 20%] Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o
+[ 20%] Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o
+[ 20%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Properties.o
+[ 20%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.o
+[ 20%] Linking CXX shared library libOpenGLWindow.so
+[ 20%] Built target OpenGLWindow
+[ 20%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.o
+[ 20%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.o
+[ 20%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/RadioButton.o
+[ 20%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.o
+[ 20%] Building CXX object src/Bullet3Collision/CMakeFiles/Bullet3Collision.dir/NarrowPhaseCollision/b3CpuNarrowPhase.o
+[ 20%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.o
+[ 20%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/RadioButtonController.o
+[ 21%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.o
+[ 21%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.o
+[ 21%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.o
+[ 21%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.o
+[ 22%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ResizableControl.o
+[ 22%] Linking CXX shared library libBullet3Collision.so
+[ 22%] Built target Bullet3Collision
+Scanning dependencies of target Bullet3Dynamics
+[ 23%] Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o
+[ 23%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Resizer.o
+[ 23%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.o
+[ 23%] Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.o
+[ 23%] Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.o
+[ 23%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/RichLabel.o
+[ 23%] Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.o
+[ 23%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ScrollBar.o
+[ 23%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.o
+[ 23%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ScrollBarBar.o
+[ 23%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.o
+[ 23%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ScrollBarButton.o
+[ 23%] Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.o
+[ 24%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.o
+[ 24%] Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.o
+[ 24%] Linking CXX shared library libBullet3Dynamics.so
+[ 24%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/ScrollControl.o
+[ 24%] Built target Bullet3Dynamics
+Scanning dependencies of target Bullet3OpenCL_clew
+[ 24%] Building C object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/__/clew/clew.o
+[ 24%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/BroadphaseCollision/b3GpuGridBroadphase.o
+[ 24%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.o
+[ 24%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.o
+[ 25%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Slider.o
+[ 25%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.o
+[ 25%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/BroadphaseCollision/b3GpuSapBroadphase.o
+[ 25%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.o
+[ 25%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/SplitterBar.o
+[ 25%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.o
+[ 25%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.o
+[ 26%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.o
+[ 26%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.o
+[ 26%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/TabButton.o
+[ 26%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.o
+[ 26%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.o
+[ 26%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/TabControl.o
+[ 26%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.o
+[ 26%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/TabStrip.o
+[ 26%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.o
+[ 27%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.o
+[ 27%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.o
+[ 28%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/BroadphaseCollision/b3GpuParallelLinearBvhBroadphase.o
+[ 28%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.o
+[ 28%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/Text.o
+[ 28%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/BroadphaseCollision/b3GpuParallelLinearBvh.o
+[ 28%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o
+[ 28%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.o
+[ 28%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.o
+[ 29%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/TextBox.o
+[ 29%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.o
+[ 30%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.o
+[ 30%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/Initialize/b3OpenCLUtils.o
+[ 30%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.o
+[ 30%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3ContactCache.o
+[ 30%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3ConvexHullContact.o
+[ 30%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/TextBoxNumeric.o
+[ 30%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.o
+[ 30%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o
+[ 30%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.o
+[ 30%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/TreeControl.o
+[ 30%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.o
+[ 30%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.o
+[ 30%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/TreeNode.o
+[ 31%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.o
+[ 31%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.o
+[ 31%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.o
+[ 31%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.o
+[ 31%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.o
+[ 31%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.o
+[ 31%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/VerticalScrollBar.o
+[ 32%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.o
+[ 32%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o
+[ 32%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.o
+[ 32%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/VerticalSlider.o
+[ 32%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.o
+[ 32%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.o
+[ 32%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Controls/WindowControl.o
+[ 32%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.o
+[ 32%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.o
+[ 33%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/DragAndDrop.o
+[ 34%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.o
+[ 34%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3GjkEpa.o
+[ 34%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Gwen.o
+[ 34%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.o
+[ 34%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Hook.o
+[ 34%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o
+[ 34%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.o
+[ 34%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Platforms/Null.o
+[ 34%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.o
+[ 34%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Platforms/Windows.o
+[ 34%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Renderers/OpenGL_DebugFont.o
+[ 34%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.o
+[ 34%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Skin.o
+[ 34%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.o
+[ 35%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.o
+[ 35%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3OptimizedBvh.o
+[ 36%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/ToolTip.o
+[ 36%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.o
+[ 36%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.o
+[ 36%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.o
+[ 36%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.o
+[ 36%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.o
+[ 36%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/Utility.o
+[ 37%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3QuantizedBvh.o
+[ 38%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.o
+[ 38%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o
+[ 38%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.o
+[ 38%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/events.o
+[ 38%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o
+[ 38%] Building CXX object examples/ThirdPartyLibs/Gwen/CMakeFiles/gwen.dir/inputhandler.o
+[ 38%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3StridingMeshInterface.o
+[ 38%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.o
+[ 38%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.o
+[ 38%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3TriangleCallback.o
+[ 38%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3TriangleIndexVertexArray.o
+[ 38%] Linking CXX shared library libgwen.so
+[ 38%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/NarrowphaseCollision/b3VoronoiSimplexSolver.o
+[ 38%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/ParallelPrimitives/b3BoundSearchCL.o
+[ 38%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o
+[ 38%] Built target gwen
+[ 39%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o
+[ 39%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/ParallelPrimitives/b3FillCL.o
+[ 39%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o
+[ 39%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o
+[ 39%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o
+[ 40%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/ParallelPrimitives/b3LauncherCL.o
+[ 40%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o
+[ 40%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.o
+[ 40%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.o
+[ 40%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/ParallelPrimitives/b3PrefixScanCL.o
+[ 41%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.o
+[ 41%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.o
+[ 41%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.o
+[ 41%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/ParallelPrimitives/b3PrefixScanFloat4CL.o
+[ 41%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.o
+[ 41%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/ParallelPrimitives/b3RadixSort32CL.o
+[ 41%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.o
+[ 41%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.o
+[ 42%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.o
+[ 42%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/Raycast/b3GpuRaycast.o
+[ 42%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.o
+[ 42%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.o
+[ 42%] Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.o
+[ 42%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/RigidBody/b3GpuGenericConstraint.o
+[ 43%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/RigidBody/b3GpuJacobiContactSolver.o
+[ 43%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/RigidBody/b3GpuNarrowPhase.o
+[ 43%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/RigidBody/b3GpuPgsConstraintSolver.o
+[ 43%] Linking CXX shared library libBulletCollision.so
+[ 43%] Built target BulletCollision
+Scanning dependencies of target BulletDynamics
+[ 43%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Character/btKinematicCharacterController.o
+[ 43%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/RigidBody/b3GpuPgsContactSolver.o
+[ 43%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btConeTwistConstraint.o
+[ 43%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/RigidBody/b3GpuRigidBodyPipeline.o
+[ 43%] Building CXX object src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir/RigidBody/b3Solver.o
+[ 44%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btContactConstraint.o
+[ 44%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btFixedConstraint.o
+[ 44%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btGearConstraint.o
+[ 44%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btGeneric6DofConstraint.o
+[ 44%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btGeneric6DofSpringConstraint.o
+[ 44%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btGeneric6DofSpring2Constraint.o
+[ 44%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btHinge2Constraint.o
+[ 45%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btHingeConstraint.o
+[ 45%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btPoint2PointConstraint.o
+[ 45%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btSequentialImpulseConstraintSolver.o
+[ 45%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btSequentialImpulseConstraintSolverMt.o
+[ 45%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btBatchedConstraints.o
+[ 45%] Linking CXX shared library libBullet3OpenCL_clew.so
+[ 45%] Built target Bullet3OpenCL_clew
+Scanning dependencies of target ConvexDecomposition
+[ 45%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.o
+[ 46%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o
+[ 46%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o
+[ 46%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btNNCGConstraintSolver.o
+[ 47%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btSliderConstraint.o
+[ 47%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.o
+[ 47%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.o
+[ 47%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.o
+[ 47%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btSolve2LinearConstraint.o
+[ 47%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.o
+[ 47%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btTypedConstraint.o
+[ 47%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/ConstraintSolver/btUniversalConstraint.o
+[ 47%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Dynamics/btDiscreteDynamicsWorld.o
+[ 48%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.o
+[ 48%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.o
+[ 48%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Dynamics/btDiscreteDynamicsWorldMt.o
+[ 48%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Dynamics/btSimulationIslandManagerMt.o
+[ 49%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Dynamics/btRigidBody.o
+[ 49%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Dynamics/btSimpleDynamicsWorld.o
+[ 49%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Vehicle/btRaycastVehicle.o
+[ 49%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.o
+[ 49%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.o
+[ 49%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Vehicle/btWheelInfo.o
+[ 49%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBody.o
+[ 49%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyConstraint.o
+[ 49%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.o
+[ 49%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyConstraintSolver.o
+[ 49%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.o
+[ 49%] Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/splitplane.o
+[ 50%] Linking CXX shared library libConvexDecomposition.so
+[ 51%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyDynamicsWorld.o
+[ 51%] Built target ConvexDecomposition
+Scanning dependencies of target GIMPACTUtils
+[ 51%] Building CXX object Extras/GIMPACTUtils/CMakeFiles/GIMPACTUtils.dir/btGImpactConvexDecompositionShape.o
+[ 51%] Linking CXX shared library libGIMPACTUtils.so
+[ 51%] Built target GIMPACTUtils
+[ 51%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyFixedConstraint.o
+[ 51%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyGearConstraint.o
+[ 51%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyJointLimitConstraint.o
+[ 51%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyJointMotor.o
+[ 51%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyMLCPConstraintSolver.o
+[ 52%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodyPoint2Point.o
+[ 52%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodySliderConstraint.o
+[ 52%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/Featherstone/btMultiBodySphericalJointMotor.o
+[ 52%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/MLCPSolvers/btDantzigLCP.o
+[ 52%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/MLCPSolvers/btMLCPSolver.o
+[ 52%] Building CXX object src/BulletDynamics/CMakeFiles/BulletDynamics.dir/MLCPSolvers/btLemkeAlgorithm.o
+[ 52%] Linking CXX shared library libBulletDynamics.so
+[ 52%] Built target BulletDynamics
+Scanning dependencies of target App_HelloWorld
+Scanning dependencies of target App_BasicExample
+[ 52%] Building CXX object examples/HelloWorld/CMakeFiles/App_HelloWorld.dir/HelloWorld.o
+[ 52%] Building CXX object examples/BasicDemo/CMakeFiles/App_BasicExample.dir/BasicExample.o
+Scanning dependencies of target BulletInverseDynamicsUtils
+[ 52%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/CloneTreeCreator.o
+Scanning dependencies of target AppBasicExampleGui
+[ 52%] Building CXX object examples/BasicDemo/CMakeFiles/AppBasicExampleGui.dir/BasicExample.o
+[ 52%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/CoilCreator.o
+[ 52%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/MultiBodyTreeCreator.o
+[ 53%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/btMultiBodyTreeCreator.o
+[ 53%] Linking CXX executable App_HelloWorld
+[ 53%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/DillCreator.o
+[ 53%] Built target App_HelloWorld
+Scanning dependencies of target BulletWorldImporter
+[ 53%] Building CXX object Extras/Serialize/BulletWorldImporter/CMakeFiles/BulletWorldImporter.dir/btMultiBodyWorldImporter.o
+[ 53%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/MultiBodyTreeDebugGraph.o
+[ 53%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/invdyn_bullet_comparison.o
+[ 53%] Building CXX object examples/BasicDemo/CMakeFiles/App_BasicExample.dir/main.o
+[ 53%] Building CXX object examples/BasicDemo/CMakeFiles/AppBasicExampleGui.dir/__/StandaloneMain/main_opengl_single_example.o
+[ 53%] Building CXX object examples/BasicDemo/CMakeFiles/AppBasicExampleGui.dir/__/ExampleBrowser/OpenGLGuiHelper.o
+[ 53%] Linking CXX executable App_BasicExample
+[ 53%] Built target App_BasicExample
+Scanning dependencies of target BulletSoftBody
+[ 53%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btSoftBody.o
+[ 53%] Building CXX object Extras/Serialize/BulletWorldImporter/CMakeFiles/BulletWorldImporter.dir/btBulletWorldImporter.o
+[ 53%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/IDRandomUtil.o
+[ 53%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/RandomTreeCreator.o
+[ 53%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/SimpleTreeCreator.o
+[ 54%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/MultiBodyNameMap.o
+[ 54%] Building CXX object Extras/InverseDynamics/CMakeFiles/BulletInverseDynamicsUtils.dir/User2InternalIndex.o
+[ 54%] Linking CXX shared library libBulletInverseDynamicsUtils.so
+[ 54%] Built target BulletInverseDynamicsUtils
+[ 54%] Building CXX object Extras/Serialize/BulletWorldImporter/CMakeFiles/BulletWorldImporter.dir/btWorldImporter.o
+[ 54%] Building CXX object examples/BasicDemo/CMakeFiles/AppBasicExampleGui.dir/__/ExampleBrowser/GL_ShapeDrawer.o
+[ 54%] Building CXX object examples/BasicDemo/CMakeFiles/AppBasicExampleGui.dir/__/ExampleBrowser/CollisionShape2TriangleMesh.o
+[ 54%] Building CXX object examples/BasicDemo/CMakeFiles/AppBasicExampleGui.dir/__/Utils/b3Clock.o
+[ 54%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btSoftBodyConcaveCollisionAlgorithm.o
+[ 55%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btSoftBodyHelpers.o
+[ 56%] Linking CXX executable AppBasicExampleGui
+[ 56%] Built target AppBasicExampleGui
+[ 56%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btSoftBodyRigidBodyCollisionConfiguration.o
+[ 56%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btSoftRigidCollisionAlgorithm.o
+[ 56%] Linking CXX shared library libBulletWorldImporter.so
+[ 56%] Built target BulletWorldImporter
+Scanning dependencies of target BulletXmlWorldImporter
+[ 56%] Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.o
+[ 56%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btSoftRigidDynamicsWorld.o
+[ 56%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btSoftMultiBodyDynamicsWorld.o
+[ 56%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btSoftSoftCollisionAlgorithm.o
+[ 56%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btDefaultSoftBodySolver.o
+[ 57%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btDeformableBackwardEulerObjective.o
+[ 58%] Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/string_split.o
+[ 58%] Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o
+[ 58%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btDeformableBodySolver.o
+[ 58%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btDeformableMultiBodyConstraintSolver.o
+[ 58%] Linking CXX shared library libBulletXmlWorldImporter.so
+[ 58%] Built target BulletXmlWorldImporter
+[ 58%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btDeformableContactProjection.o
+[ 58%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btDeformableMultiBodyDynamicsWorld.o
+[ 58%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/btDeformableContactConstraint.o
+[ 58%] Building CXX object src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/poly34.o
+[ 59%] Linking CXX shared library libBulletSoftBody.so
+[ 59%] Built target BulletSoftBody
+Scanning dependencies of target App_PhysicsServer_SharedMemory
+Scanning dependencies of target App_PhysicsServer_SharedMemory_GUI
+Scanning dependencies of target BulletRobotics
+[ 59%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/collisionFilterPlugin/collisionFilterPlugin.o
+[ 59%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/plugins/collisionFilterPlugin/collisionFilterPlugin.o
+[ 59%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/OpenGLWindow/SimpleCamera.o
+Scanning dependencies of target App_PhysicsServer_SharedMemory_VR
+[ 59%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/plugins/collisionFilterPlugin/collisionFilterPlugin.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/pdControlPlugin/pdControlPlugin.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/plugins/pdControlPlugin/pdControlPlugin.o
+[ 60%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/TinyRenderer/geometry.o
+[ 60%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/TinyRenderer/model.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/plugins/pdControlPlugin/pdControlPlugin.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/b3RobotSimulatorClientAPI_NoDirect.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/b3RobotSimulatorClientAPI_NoDirect.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/b3RobotSimulatorClientAPI_NoDirect.o
+[ 60%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/TinyRenderer/tgaimage.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/IKTrajectoryHelper.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/IKTrajectoryHelper.o
+[ 60%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/IKTrajectoryHelper.o
+[ 61%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/TinyRenderer/our_gl.o
+[ 61%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClient.o
+[ 61%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsClient.o
+[ 61%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientSharedMemory.o
+[ 62%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsClientSharedMemory.o
+[ 62%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/TinyRenderer/TinyRenderer.o
+[ 62%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsClient.o
+[ 62%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsClientSharedMemory.o
+[ 62%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o
+[ 62%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o
+[ 62%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.o
+[ 62%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o
+[ 62%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientExample.o
+[ 62%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsClientExample.o
+[ 63%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsClientExample.o
+[ 64%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.o
+[ 64%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o
+[ 64%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o
+[ 64%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServerExample.o
+[ 64%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsServerExample.o
+[ 64%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsServerExample.o
+[ 64%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/InProcessMemory.o
+[ 64%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsClient.o
+[ 64%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsServer.o
+[ 64%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.o
+[ 65%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServerExampleBullet2.o
+[ 65%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsServerExampleBullet2.o
+[ 65%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServerSharedMemory.o
+[ 65%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsServerSharedMemory.o
+[ 66%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsDirect.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsServerExampleBullet2.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServer.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsServer.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientC_API.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsServerSharedMemory.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsClientC_API.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsServer.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsClientC_API.o
+[ 66%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/GraphicsClientExample.o
+[ 67%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/GraphicsClientExample.o
+[ 67%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/GraphicsServerExample.o
+[ 67%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/GraphicsServerExample.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PosixSharedMemory.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PosixSharedMemory.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/Win32SharedMemory.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/InProcessMemory.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/Win32SharedMemory.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/InProcessMemory.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsDirect.o
+[ 68%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsDirect.o
+[ 68%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.o
+[ 68%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/GraphicsClientExample.o
+[ 69%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/GraphicsServerExample.o
+[ 69%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PosixSharedMemory.o
+[ 69%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/Win32SharedMemory.o
+[ 69%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/InProcessMemory.o
+[ 69%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsDirect.o
+[ 69%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsDirectC_API.o
+[ 70%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsDirectC_API.o
+[ 70%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsLoopBack.o
+[ 70%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsLoopBack.o
+[ 70%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsLoopBackC_API.o
+[ 70%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsLoopBackC_API.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientSharedMemory_C_API.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsClientSharedMemory_C_API.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientSharedMemory2_C_API.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsClientSharedMemory2_C_API.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientSharedMemory2.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsClientSharedMemory2.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/SharedMemoryCommandProcessor.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/SharedMemoryCommandProcessor.o
+[ 71%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServerCommandProcessor.o
+[ 72%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/PhysicsServerCommandProcessor.o
+[ 72%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsDirectC_API.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsLoopBack.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsLoopBackC_API.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsClientSharedMemory_C_API.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsClientSharedMemory2_C_API.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsClientSharedMemory2.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/SharedMemoryCommandProcessor.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/PhysicsServerCommandProcessor.o
+[ 73%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/b3PluginManager.o
+[ 73%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/plugins/tinyRendererPlugin/tinyRendererPlugin.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/tinyRendererPlugin/tinyRendererPlugin.o
+[ 73%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o
+[ 73%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.o
+[ 73%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsClientC_API.o
+[ 74%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/plugins/tinyRendererPlugin/tinyRendererPlugin.o
+[ 74%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o
+[ 75%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/Win32SharedMemory.o
+[ 75%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PosixSharedMemory.o
+[ 75%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Utils/b3ResourcePath.o
+[ 75%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Utils/RobotLoggingUtil.o
+[ 75%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Utils/b3Clock.o
+[ 75%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Utils/ChromeTraceUtil.o
+[ 76%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o
+[ 76%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/b3PluginManager.o
+[ 77%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/b3PluginManager.o
+[ 77%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o
+[ 77%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/TinyRenderer/geometry.o
+[ 77%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/geometry.o
+[ 77%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/TinyRenderer/model.o
+[ 77%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/model.o
+[ 77%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/b3PluginManager.o
+[ 77%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/TinyRenderer/tgaimage.o
+[ 77%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/tgaimage.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/TinyRenderer/our_gl.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/our_gl.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/TinyRenderer/TinyRenderer.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/TinyRenderer/geometry.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/TinyRenderer.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/TinyRenderer/model.o
+[ 78%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/TinyRenderer/tgaimage.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/TinyRenderer/our_gl.o
+[ 78%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/OpenGLWindow/SimpleCamera.o
+[ 79%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/OpenGLWindow/SimpleCamera.o
+[ 79%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/TinyRenderer/TinyRenderer.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/OpenGLWindow/SimpleCamera.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o
+[ 80%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/Jacobian.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o
+[ 80%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/LinearR2.o
+[ 80%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/LinearR3.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportURDFDemo/UrdfParser.o
+[ 80%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/LinearR4.o
+[ 80%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/UrdfParser.o
+[ 81%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/MatrixRmn.o
+[ 81%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/Misc.o
+[ 81%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/Node.o
+[ 81%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/Tree.o
+[ 81%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/BussIK/VectorRn.o
+[ 81%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o
+[ 81%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportURDFDemo/UrdfParser.o
+[ 82%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o
+[ 82%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o
+[ 82%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o
+[ 82%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o
+[ 82%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o
+[ 83%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o
+[ 83%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o
+[ 83%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.o
+[ 83%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o
+[ 83%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o
+[ 84%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o
+[ 84%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o
+[ 84%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Utils/b3ResourcePath.o
+[ 84%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o
+[ 84%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Utils/b3Clock.o
+[ 84%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Utils/RobotLoggingUtil.o
+[ 85%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Utils/b3ResourcePath.o
+[ 85%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Utils/b3Clock.o
+[ 85%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Utils/RobotLoggingUtil.o
+[ 85%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Utils/ChromeTraceUtil.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Utils/ChromeTraceUtil.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Utils/b3ResourcePath.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Utils/b3Clock.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Utils/RobotLoggingUtil.o
+[ 86%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Utils/ChromeTraceUtil.o
+[ 86%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o
+[ 87%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o
+[ 87%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o
+[ 88%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o
+[ 88%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o
+[ 88%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o
+[ 88%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o
+[ 88%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o
+[ 88%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o
+[ 88%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o
+[ 88%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o
+[ 88%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o
+[ 88%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o
+[ 89%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o
+[ 89%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o
+[ 89%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/ThirdPartyLibs/stb_image/stb_image.o
+[ 89%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/ThirdPartyLibs/stb_image/stb_image.o
+[ 89%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/MultiThreading/b3PosixThreadSupport.o
+[ 89%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/MultiThreading/b3Win32ThreadSupport.o
+[ 89%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/MultiThreading/b3ThreadSupportInterface.o
+[ 89%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsClientUDP.o
+[ 89%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsClientUDP_C_API.o
+[ 90%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/win32.o
+[ 90%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/unix.o
+[ 90%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/callbacks.o
+[ 90%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/compress.o
+[ 90%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o
+[ 90%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/host.o
+[ 90%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/list.o
+[ 90%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/packet.o
+[ 91%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/peer.o
+[ 91%] Building C object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/enet/protocol.o
+[ 91%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ThirdPartyLibs/stb_image/stb_image.o
+[ 91%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsClientTCP.o
+[ 91%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/SharedMemory/PhysicsClientTCP_C_API.o
+[ 91%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.o
+[ 91%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.o
+[ 92%] Building CXX object Extras/BulletRobotics/CMakeFiles/BulletRobotics.dir/__/__/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.o
+[ 92%] Linking CXX shared library libBulletRobotics.so
+[ 92%] Built target BulletRobotics
+Scanning dependencies of target BulletRoboticsGUI
+[ 92%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/plugins/stablePDPlugin/SpAlg.o
+[ 93%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/MultiThreading/b3ThreadSupportInterface.o
+[ 93%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/StandaloneMain/main_opengl_single_example.o
+[ 93%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/ExampleBrowser/OpenGLGuiHelper.o
+[ 93%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/MultiThreading/b3ThreadSupportInterface.o
+[ 93%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/MultiThreading/b3PosixThreadSupport.o
+[ 94%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/main.o
+[ 94%] Linking CXX executable App_PhysicsServer_SharedMemory
+[ 94%] Built target App_PhysicsServer_SharedMemory
+[ 94%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/ExampleBrowser/GL_ShapeDrawer.o
+[ 94%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/MultiThreading/b3ThreadSupportInterface.o
+[ 95%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/StandaloneMain/hellovr_opengl_main.o
+[ 95%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/ExampleBrowser/CollisionShape2TriangleMesh.o
+[ 95%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/plugins/stablePDPlugin/Shape.o
+[ 95%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_GUI.dir/__/MultiThreading/b3PosixThreadSupport.o
+[ 95%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/plugins/stablePDPlugin/RBDUtil.o
+[ 95%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/plugins/stablePDPlugin/RBDModel.o
+[ 96%] Linking CXX executable App_PhysicsServer_SharedMemory_GUI
+[ 96%] Built target App_PhysicsServer_SharedMemory_GUI
+[ 96%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/plugins/stablePDPlugin/MathUtil.o
+[ 97%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/plugins/stablePDPlugin/KinTree.o
+[ 97%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ExampleBrowser/OpenGLGuiHelper.o
+[ 97%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ExampleBrowser/GL_ShapeDrawer.o
+[ 97%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ExampleBrowser/CollisionShape2TriangleMesh.o
+[ 97%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/plugins/stablePDPlugin/BulletConversion.o
+[ 97%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/RenderingExamples/TinyVRGui.o
+[ 97%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/RenderingExamples/TimeSeriesCanvas.o
+[ 98%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/RenderingExamples/TimeSeriesFontData.o
+[ 98%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/ExampleBrowser/InProcessExampleBrowser.o
+[ 98%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/MultiThreading/b3PosixThreadSupport.o
+[ 98%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ThirdPartyLibs/openvr/samples/shared/lodepng.o
+[ 98%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/GraphicsServerExample.o
+[ 98%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/GraphicsClientExample.o
+[ 98%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/RemoteGUIHelper.o
+[ 98%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/RemoteGUIHelperTCP.o
+[ 99%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/PhysicsServerExample.o
+[ 99%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/PhysicsServerExampleBullet2.o
+[ 99%] Building CXX object Extras/BulletRoboticsGUI/CMakeFiles/BulletRoboticsGUI.dir/__/__/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.o
+[ 99%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ThirdPartyLibs/openvr/samples/shared/Matrices.o
+[ 99%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ThirdPartyLibs/openvr/samples/shared/pathtools.o
+[ 99%] Building CXX object examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory_VR.dir/__/ThirdPartyLibs/openvr/samples/shared/strtools.o
+[ 99%] Linking CXX executable App_PhysicsServer_SharedMemory_VR
+[ 99%] Built target App_PhysicsServer_SharedMemory_VR
+[ 99%] Linking CXX shared library libBulletRoboticsGUI.so
+[ 99%] Built target BulletRoboticsGUI
+Scanning dependencies of target pybullet
+[ 99%] Building C object examples/pybullet/CMakeFiles/pybullet.dir/pybullet.o
+[100%] Linking C shared library pybullet.so
+[100%] Built target pybullet
+Completed build of Bullet.
