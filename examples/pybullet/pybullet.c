@@ -12136,7 +12136,7 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     free(joint_index_list);
 
 	b3SharedMemoryCommandHandle commandHandle;
-    commandHandle = b3CalculateBatchFK(sm);
+    commandHandle = b3CalculateBatchFkInit(sm);
 
     /*
     for(int i=0; i<n_wp; i++){

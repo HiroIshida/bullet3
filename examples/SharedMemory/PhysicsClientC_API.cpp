@@ -9,7 +9,7 @@
 #include <string.h>
 #include "SharedMemoryCommands.h"
 
-B3_SHARED_API b3SharedMemoryCommandHandle b3CalculateBatchFK(b3PhysicsClientHandle physClient)
+B3_SHARED_API b3SharedMemoryCommandHandle b3CalculateBatchFkInit(b3PhysicsClientHandle physClient)
 {
 	PhysicsClient* cl = (PhysicsClient*)physClient;
 	b3Assert(cl);
