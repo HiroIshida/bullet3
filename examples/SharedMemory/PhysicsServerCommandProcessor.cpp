@@ -13349,9 +13349,8 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
     btMultiBody* mb = bodydata->m_multiBody;
 	SharedMemoryStatus& serverCmd = serverStatusOut;
 
-    //double*** pts = serverCmd.m_calculateBatchFkArguments.collision_pts;
-    double*** pts;
-    pts = (double***)malloc(n_wp * sizeof(double**));
+    serverCmd.m_calculateBatchFkResultArgs.collision_pts = (double***)malloc(n_wp * sizeof(double**));
+    double*** pts = serverCmd.m_calculateBatchFkResultArgs.collision_pts;
     for(int i=0; i<n_wp; i++){
         pts[i] = (double**)malloc(n_jt * sizeof(double*));
         for(int j=0; j<n_jt; j++){

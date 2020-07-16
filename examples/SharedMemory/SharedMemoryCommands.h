@@ -1116,6 +1116,7 @@ struct b3SendMeshDataArgs
 	int m_numVerticesCopied;
 	int m_startingVertex;
 	int m_numVerticesRemaining;
+
 };
 
 struct CalculateBatcFkArgs
@@ -1125,6 +1126,11 @@ struct CalculateBatcFkArgs
     double** m_av_seq;
     int m_num_jt;
     int m_num_wp;
+};
+
+struct CalculateBatchFkResultArgs
+{
+    double*** collision_pts; // I mean 3dim array, not in a mathmatical sense.
 };
 
 struct SharedMemoryCommand
@@ -1227,6 +1233,7 @@ struct SharedMemoryStatus
 	int m_updateFlags;
 
 	union {
+		struct CalculateBatchFkResultArgs m_calculateBatchFkResultArgs;
 		struct BulletDataStreamArgs m_dataStreamArguments;
 		struct SdfLoadedArgs m_sdfLoadedArgs;
 		struct SendActualStateArgs m_sendActualStateArgs;
