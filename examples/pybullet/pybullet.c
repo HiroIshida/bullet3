@@ -12128,6 +12128,9 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
             av_list[i][j] = PyFloat_AsDouble(PyTuple_GetItem(av_py, j));
         }
     }
+	b3SharedMemoryCommandHandle commandHandle;
+    commandHandle = b3CalculateBatchFkInit(sm, bodyUniqueId, joint_index_list, av_list);
+    b3SharedMemoryStatusHandle statusHandle = b3SubmitClientCommandAndWaitStatus(sm, commandHandle);
 
     for(int i=0; i<n_wp; i++){
         free(av_list[i]);
@@ -12135,8 +12138,6 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     free(av_list);
     free(joint_index_list);
 
-	b3SharedMemoryCommandHandle commandHandle;
-    commandHandle = b3CalculateBatchFkInit(sm);
 
     /*
     for(int i=0; i<n_wp; i++){

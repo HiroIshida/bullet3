@@ -13331,6 +13331,15 @@ bool PhysicsServerCommandProcessor::processSaveBulletCommand(const struct Shared
 	return hasStatus;
 }
 
+bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct SharedMemoryCommand& clientCmd, struct SharedMemoryStatus& serverStatusOut, char* bufferServerToClient, int bufferSizeInBytes)
+{
+	bool hasStatus = true;
+	BT_PROFILE("CMD_CALCULATE_BATCH_FK");
+    printf("hoge");
+    return hasStatus;
+}
+
+
 bool PhysicsServerCommandProcessor::processCommand(const struct SharedMemoryCommand& clientCmd, struct SharedMemoryStatus& serverStatusOut, char* bufferServerToClient, int bufferSizeInBytes)
 {
 	//	BT_PROFILE("processCommand");
@@ -13351,6 +13360,12 @@ bool PhysicsServerCommandProcessor::processCommand(const struct SharedMemoryComm
 	//consume the command
 	switch (clientCmd.m_type)
 	{
+		case CMD_CALCULATE_BATCH_FK:
+		{
+			hasStatus = processCalculateBatckFkCommand(clientCmd, serverStatusOut, bufferServerToClient, bufferSizeInBytes);
+			break;
+		}
+
 		case CMD_STATE_LOGGING:
 		{
 			hasStatus = processStateLoggingCommand(clientCmd, serverStatusOut, bufferServerToClient, bufferSizeInBytes);
