@@ -12089,62 +12089,114 @@ static PyObject* pybullet_calculateMassMatrix(PyObject* self, PyObject* args, Py
 	return Py_None;
 }
 
-/*
+
 static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* keywds)
 {
-	{
-		int bodyUniqueId;
-		int jointIndex;
-		double targetValue;
-		double targetVelocity = 0;
+    int bodyUniqueId;
+    PyObject *joint_index_list_py;
+    PyObject *av_list_py; 
+    int physicsClientId = 0;
 
-		b3PhysicsClientHandle sm = 0;
+    b3PhysicsClientHandle sm = 0;
 
-		int physicsClientId = 0;
-		static char* kwlist[] = {"bodyUniqueId", "jointIndex", "targetValue", "targetVelocity", "physicsClientId", NULL};
-		if (!PyArg_ParseTupleAndKeywords(args, keywds, "iid|di", kwlist, &bodyUniqueId, &jointIndex, &targetValue, &targetVelocity, &physicsClientId))
-		{
-			return NULL;
-		}
-		sm = getPhysicsClient(physicsClientId);
-		if (sm == 0)
-		{
-			PyErr_SetString(SpamError, "Not connected to physics server.");
-			return NULL;
-		}
+    static char* kwlist[] = {"bodyUniqueId", "jointIndexList", "AngleVectorList", NULL};
+    PyArg_ParseTupleAndKeywords(args, keywds, "iOO|i", kwlist, 
+            &bodyUniqueId, 
+            &joint_index_list_py, 
+            &av_list_py, 
+            &physicsClientId);
 
-		for(int i=0; i<100000; i++){
-			b3SharedMemoryCommandHandle commandHandle;
-			b3SharedMemoryStatusHandle statusHandle;
-			int numJoints;
 
-			numJoints = b3GetNumJoints(sm, bodyUniqueId);
-			if ((jointIndex >= numJoints) || (jointIndex < 0))
-			{
-				PyErr_SetString(SpamError, "Joint index out-of-range.");
-				return NULL;
-			}
+    int n_wp = PySequence_Size(av_list_py);
+    int n_jt = PySequence_Size(joint_index_list_py);
 
-			commandHandle = b3CreatePoseCommandInit(sm, bodyUniqueId);
+    double* jt_list = (int*)malloc(n_jt * sizeof(int));
 
-			b3CreatePoseCommandSetJointPosition(sm, commandHandle, jointIndex,
-												targetValue);
 
-			b3CreatePoseCommandSetJointVelocity(sm, commandHandle, jointIndex,
-												targetVelocity);
 
-			statusHandle = b3SubmitClientCommandAndWaitStatus(sm, commandHandle);
-		}
-	}
+    double** av_list = (double**)malloc(n_wp * sizeof(double*));
+    for(int i=0; i<n_jt; i++){ 
+        av_list[i] = (double*)malloc(n_jt * sizeof(double));
+    }
+
+    for(int i=0; i<n_wp; i++){
+        PyObject* av_py = PyList_GetItem(av_list_py, i);
+        for(int j=0; j<n_jt; j++){
+            //av_list[i][j] = PyFloat_AsDouble(PyList_GET_ITEM(av_py, i));
+        }
+    }
+
+    for(int i=0; i<n_wp; i++){
+        free(av_list[i]);
+    }
+    free(av_list);
+
+
+
+
+
+    /*
+    for(int i=0; i<n_wp; i++){
+        *av_list
+    }
+
+    PyObject* av_list = PySequence_Fast(av_list_, "wakaran");
+
+					PyObject* rayFromObj = PySequence_GetItem(rayFromObjList, i);
+					PyObject* rayToObj = PySequence_GetItem(seqRayToObj, i);
+					double rayFromWorld[3];
+					double rayToWorld[3];
+
+					if ((pybullet_internalSetVectord(rayFromObj, rayFromWorld)) &&
+						(pybullet_internalSetVectord(rayToObj, rayToWorld)))
+
+                        */
+
+
+    /*
+    if (!PyArg_ParseTupleAndKeywords(args, keywds, "iid|di", kwlist, &bodyUniqueId, &jointIndex, &targetValue, &targetVelocity, &physicsClientId))
+    {
+        return NULL;
+    }
+    sm = getPhysicsClient(physicsClientId);
+    if (sm == 0)
+    {
+        PyErr_SetString(SpamError, "Not connected to physics server.");
+        return NULL;
+    }
+
+    for(int i=0; i<100000; i++){
+        b3SharedMemoryCommandHandle commandHandle;
+        b3SharedMemoryStatusHandle statusHandle;
+        int numJoints;
+
+        numJoints = b3GetNumJoints(sm, bodyUniqueId);
+        if ((jointIndex >= numJoints) || (jointIndex < 0))
+        {
+            PyErr_SetString(SpamError, "Joint index out-of-range.");
+            return NULL;
+        }
+
+        commandHandle = b3CreatePoseCommandInit(sm, bodyUniqueId);
+
+        b3CreatePoseCommandSetJointPosition(sm, commandHandle, jointIndex,
+                                            targetValue);
+
+        b3CreatePoseCommandSetJointVelocity(sm, commandHandle, jointIndex,
+                                            targetVelocity);
+
+        statusHandle = b3SubmitClientCommandAndWaitStatus(sm, commandHandle);
+    }
+    */
 	Py_INCREF(Py_None);
 	return Py_None;
 }
-*/
+
 
 
 static PyMethodDef SpamMethods[] = {
-    //{"planpath", (PyCFunction)pybullet_planPath, METH_VARARGS | METH_KEYWORDS,
-     //   "python interface to rrt"},
+    {"planpath", (PyCFunction)pybullet_planPath, METH_VARARGS | METH_KEYWORDS,
+       "python interface to rrt"},
 
 	{"connect", (PyCFunction)pybullet_connectPhysicsServer, METH_VARARGS | METH_KEYWORDS,
 	 "connect(method, key=SHARED_MEMORY_KEY, options='')\n"
