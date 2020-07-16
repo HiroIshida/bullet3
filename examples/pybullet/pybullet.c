@@ -12110,9 +12110,10 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     int n_wp = PySequence_Size(av_list_py);
     int n_jt = PySequence_Size(joint_index_list_py);
 
-    double* jt_list = (int*)malloc(n_jt * sizeof(int));
-
-
+    double* joint_index_list = (int*)malloc(n_jt * sizeof(int));
+    for(int i=0; i<n_jt; i++){
+        joint_index_list[i] = PyFloat_AsDouble(PyTuple_GetItem(joint_index_list_py, i));
+    }
 
     double** av_list = (double**)malloc(n_wp * sizeof(double*));
     for(int i=0; i<n_jt; i++){ 
@@ -12120,9 +12121,9 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     }
 
     for(int i=0; i<n_wp; i++){
-        PyObject* av_py = PyList_GetItem(av_list_py, i);
+        PyObject* av_py = PyTuple_GetItem(av_list_py, i);
         for(int j=0; j<n_jt; j++){
-            //av_list[i][j] = PyFloat_AsDouble(PyList_GET_ITEM(av_py, i));
+            av_list[i][j] = PyFloat_AsDouble(PyTuple_GetItem(av_py, j));
         }
     }
 
@@ -12130,6 +12131,7 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
         free(av_list[i]);
     }
     free(av_list);
+    free(joint_index_list);
 
 
 
