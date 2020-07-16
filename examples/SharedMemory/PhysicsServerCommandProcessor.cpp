@@ -13335,7 +13335,6 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
 {
 
 	//serverCmd.m_type = CMD_CALCULATE_BATCH_FK_COMPLeTED;
-
     // see btMultiBody.h
 	bool hasStatus = true;
 	BT_PROFILE("CMD_CALCULATE_BATCH_FK");
@@ -13348,16 +13347,38 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
 
 	InternalBodyData* bodydata = m_data->m_bodyHandles.getHandle(bodyUniqueId);
     btMultiBody* mb = bodydata->m_multiBody;
+	SharedMemoryStatus& serverCmd = serverStatusOut;
 
-    for(int i=0; i<n_jt; i++){
-        mb->setJointPos(joint_ids[i], 0.0);
+    //double*** pts = serverCmd.m_calculateBatchFkArguments.collision_pts;
+    double*** pts;
+    pts = (double***)malloc(n_wp * sizeof(double**));
+    for(int i=0; i<n_wp; i++){
+        pts[i] = (double**)malloc(n_jt * sizeof(double*));
+        for(int j=0; j<n_jt; j++){
+            pts[i][j] = (double*)malloc(3 * sizeof(double));
+        }
     }
 
-    btAlignedObjectArray<btQuaternion> trash;
-    btAlignedObjectArray<btVector3> positions;
-    mb->forwardKinematics(trash, positions);
+    for(int i=0; i<n_wp; i++){
+        double* av = av_seq[i];
+        // forward kinematics
+        for(int j=0; j<n_jt; j++){
+            double angle = av[j];
+            mb->setJointPos(joint_ids[j], angle);
+        }
+        btAlignedObjectArray<btQuaternion> trash;
+        btAlignedObjectArray<btVector3> positions;
+        mb->forwardKinematics(trash, positions);
+        for(int j=0; j<n_jt; j++){
+            int joint_id = joint_ids[j];
+            int link_id = joint_id + 1;
 
-	SharedMemoryStatus& serverCmd = serverStatusOut;
+            for(int k=0; k<3; k++){
+                pts[i][j][k] = positions[link_id][k];
+            }
+        }
+    }
+
 	serverCmd.m_type = CMD_CALCULATE_BATCH_FK_COMPLETED;
     return hasStatus;
 }
