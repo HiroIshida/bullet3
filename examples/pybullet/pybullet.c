@@ -12100,7 +12100,7 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     b3PhysicsClientHandle sm = 0;
 
     static char* kwlist[] = {"bodyUniqueId", "jointIndexList", "AngleVectorList", NULL};
-    PyArg_ParseTupleAndKeywords(args, keywds, "iO|O|i", kwlist, 
+    PyArg_ParseTupleAndKeywords(args, keywds, "iOO|i", kwlist, 
             &bodyUniqueId, 
             &joint_index_list_py, 
             &av_list_py, 
@@ -12111,6 +12111,11 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
 
     int n_wp = PySequence_Size(av_list_py);
     int n_jt = PySequence_Size(joint_index_list_py);
+    int n_jt_ = PySequence_Size(PyTuple_GetItem(av_list_py, 0));
+    if(n_jt_!=n_jt){
+        PyErr_SetString(PyExc_ValueError, "[HIRO] dimension mismatch");
+        return NULL;
+    }
 
     int* joint_index_list = (int*)malloc(n_jt * sizeof(int));
     for(int i=0; i<n_jt; i++){
@@ -12128,72 +12133,15 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
             av_list[i][j] = PyFloat_AsDouble(PyTuple_GetItem(av_py, j));
         }
     }
-    /*
 	b3SharedMemoryCommandHandle commandHandle;
     commandHandle = b3CalculateBatchFkInit(sm, bodyUniqueId, joint_index_list, av_list, n_jt, n_wp);
     b3SharedMemoryStatusHandle statusHandle = b3SubmitClientCommandAndWaitStatus(sm, commandHandle);
-    */
-
     free(joint_index_list);
     for(int i=0; i<n_wp; i++){
         free(av_list[i]);
     }
     free(av_list);
 
-
-    /*
-    for(int i=0; i<n_wp; i++){
-        *av_list
-    }
-
-    PyObject* av_list = PySequence_Fast(av_list_, "wakaran");
-
-					PyObject* rayFromObj = PySequence_GetItem(rayFromObjList, i);
-					PyObject* rayToObj = PySequence_GetItem(seqRayToObj, i);
-					double rayFromWorld[3];
-					double rayToWorld[3];
-
-					if ((pybullet_internalSetVectord(rayFromObj, rayFromWorld)) &&
-						(pybullet_internalSetVectord(rayToObj, rayToWorld)))
-
-                        */
-
-
-    /*
-    if (!PyArg_ParseTupleAndKeywords(args, keywds, "iid|di", kwlist, &bodyUniqueId, &jointIndex, &targetValue, &targetVelocity, &physicsClientId))
-    {
-        return NULL;
-    }
-    sm = getPhysicsClient(physicsClientId);
-    if (sm == 0)
-    {
-        PyErr_SetString(SpamError, "Not connected to physics server.");
-        return NULL;
-    }
-
-    for(int i=0; i<100000; i++){
-        b3SharedMemoryCommandHandle commandHandle;
-        b3SharedMemoryStatusHandle statusHandle;
-        int numJoints;
-
-        numJoints = b3GetNumJoints(sm, bodyUniqueId);
-        if ((jointIndex >= numJoints) || (jointIndex < 0))
-        {
-            PyErr_SetString(SpamError, "Joint index out-of-range.");
-            return NULL;
-        }
-
-        commandHandle = b3CreatePoseCommandInit(sm, bodyUniqueId);
-
-        b3CreatePoseCommandSetJointPosition(sm, commandHandle, jointIndex,
-                                            targetValue);
-
-        b3CreatePoseCommandSetJointVelocity(sm, commandHandle, jointIndex,
-                                            targetVelocity);
-
-        statusHandle = b3SubmitClientCommandAndWaitStatus(sm, commandHandle);
-    }
-    */
 	Py_INCREF(Py_None);
 	return Py_None;
 }
