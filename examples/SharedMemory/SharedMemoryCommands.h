@@ -1118,7 +1118,7 @@ struct b3SendMeshDataArgs
 	int m_numVerticesRemaining;
 };
 
-struct CalculateBatckFkArgs
+struct CalculateBatcFkArgs
 {
 	int m_bodyUniqueId;
     int* m_joint_ids;
@@ -1136,7 +1136,7 @@ struct SharedMemoryCommand
 	int m_updateFlags;
 
 	union {
-        struct CalculateBatckFkArgs m_calculateBatchFkArguments;
+        struct CalculateBatcFkArgs m_calculateBatchFkArguments;
 		struct UrdfArgs m_urdfArguments;
 		struct SdfArgs m_sdfArguments;
 		struct MjcfArgs m_mjcfArguments;

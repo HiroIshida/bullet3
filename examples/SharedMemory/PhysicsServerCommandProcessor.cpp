@@ -13336,6 +13336,8 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
 	bool hasStatus = true;
 	BT_PROFILE("CMD_CALCULATE_BATCH_FK");
     printf("hoge");
+    int bodyUniqueId = clientCmd.m_calculateBatchFkArguments.m_bodyUniqueId;
+	InternalBodyData* body = m_data->m_bodyHandles.getHandle(bodyUniqueId);
     return hasStatus;
 }
 
