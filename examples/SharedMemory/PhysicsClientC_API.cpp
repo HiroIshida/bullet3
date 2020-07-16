@@ -9,6 +9,20 @@
 #include <string.h>
 #include "SharedMemoryCommands.h"
 
+B3_SHARED_API b3SharedMemoryCommandHandle b3CalculateBatchFK(b3PhysicsClientHandle physClient)
+{
+	PhysicsClient* cl = (PhysicsClient*)physClient;
+	b3Assert(cl);
+	b3Assert(cl->canSubmitCommand());
+
+	struct SharedMemoryCommand* command = cl->getAvailableSharedMemoryCommand();
+	b3Assert(command);
+
+    command->m_type = CMD_CALCULATE_BATCH_FK;
+    command->m_updateFlags = 0;
+	return (b3SharedMemoryCommandHandle)command;
+}
+
 B3_SHARED_API b3SharedMemoryCommandHandle b3LoadSdfCommandInit(b3PhysicsClientHandle physClient, const char* sdfFileName)
 {
 	PhysicsClient* cl = (PhysicsClient*)physClient;

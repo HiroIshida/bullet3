@@ -39,6 +39,7 @@
 enum EnumSharedMemoryClientCommand
 {
 	CMD_INVALID = 0,
+	CMD_CALCULATE_BATCH_FK,
 	CMD_LOAD_SDF,
 	CMD_LOAD_URDF,
 	CMD_LOAD_BULLET,

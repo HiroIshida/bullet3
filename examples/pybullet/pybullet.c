@@ -12106,6 +12106,8 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
             &av_list_py, 
             &physicsClientId);
 
+    sm = getPhysicsClient(physicsClientId);
+
 
     int n_wp = PySequence_Size(av_list_py);
     int n_jt = PySequence_Size(joint_index_list_py);
@@ -12133,9 +12135,8 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     free(av_list);
     free(joint_index_list);
 
-
-
-
+	b3SharedMemoryCommandHandle commandHandle;
+    commandHandle = b3CalculateBatchFK(sm);
 
     /*
     for(int i=0; i<n_wp; i++){
