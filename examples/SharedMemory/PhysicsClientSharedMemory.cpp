@@ -1197,6 +1197,16 @@ const SharedMemoryStatus* PhysicsClientSharedMemory::processServerStatus()
 				b3Warning("Saving world  failed");
 				break;
 			}
+
+            case CMD_CALCULATE_BATCH_FK_COMPLETED:
+            {
+				B3_PROFILE("CMD_CALCULATE_BATCH_FK_COMPLETED");
+                break;
+            }
+			{
+				B3_PROFILE("CMD_CALCULATE_INVERSE_KINEMATICS_COMPLETED");
+				break;
+			}
 			case CMD_CALCULATE_INVERSE_KINEMATICS_COMPLETED:
 			{
 				B3_PROFILE("CMD_CALCULATE_INVERSE_KINEMATICS_COMPLETED");
