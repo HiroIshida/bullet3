@@ -124,6 +124,7 @@ enum EnumSharedMemoryServerStatus
 	//CMD_CLIENT_COMMAND_COMPLETED is a generic 'completed' status that doesn't need special handling on the client
 	CMD_CLIENT_COMMAND_COMPLETED,
 	//the server will skip unknown command and report a status 'CMD_UNKNOWN_COMMAND_FLUSHED'
+    CMD_CALCULATE_BATCH_FK_COMPLETED,
 	CMD_UNKNOWN_COMMAND_FLUSHED,
 	CMD_SDF_LOADING_COMPLETED,
 	CMD_SDF_LOADING_FAILED,

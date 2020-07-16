@@ -12100,7 +12100,7 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     b3PhysicsClientHandle sm = 0;
 
     static char* kwlist[] = {"bodyUniqueId", "jointIndexList", "AngleVectorList", NULL};
-    PyArg_ParseTupleAndKeywords(args, keywds, "iOO|i", kwlist, 
+    PyArg_ParseTupleAndKeywords(args, keywds, "iO|O|i", kwlist, 
             &bodyUniqueId, 
             &joint_index_list_py, 
             &av_list_py, 
@@ -12112,13 +12112,13 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     int n_wp = PySequence_Size(av_list_py);
     int n_jt = PySequence_Size(joint_index_list_py);
 
-    double* joint_index_list = (int*)malloc(n_jt * sizeof(int));
+    int* joint_index_list = (int*)malloc(n_jt * sizeof(int));
     for(int i=0; i<n_jt; i++){
-        joint_index_list[i] = PyFloat_AsDouble(PyTuple_GetItem(joint_index_list_py, i));
+        joint_index_list[i] = (int)PyLong_AsLong(PyTuple_GetItem(joint_index_list_py, i));
     }
 
     double** av_list = (double**)malloc(n_wp * sizeof(double*));
-    for(int i=0; i<n_jt; i++){ 
+    for(int i=0; i<n_wp; i++){ 
         av_list[i] = (double*)malloc(n_jt * sizeof(double));
     }
 
@@ -12128,15 +12128,17 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
             av_list[i][j] = PyFloat_AsDouble(PyTuple_GetItem(av_py, j));
         }
     }
+    /*
 	b3SharedMemoryCommandHandle commandHandle;
-    commandHandle = b3CalculateBatchFkInit(sm, bodyUniqueId, joint_index_list, av_list);
+    commandHandle = b3CalculateBatchFkInit(sm, bodyUniqueId, joint_index_list, av_list, n_jt, n_wp);
     b3SharedMemoryStatusHandle statusHandle = b3SubmitClientCommandAndWaitStatus(sm, commandHandle);
+    */
 
+    free(joint_index_list);
     for(int i=0; i<n_wp; i++){
         free(av_list[i]);
     }
     free(av_list);
-    free(joint_index_list);
 
 
     /*

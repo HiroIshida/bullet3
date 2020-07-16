@@ -13333,11 +13333,32 @@ bool PhysicsServerCommandProcessor::processSaveBulletCommand(const struct Shared
 
 bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct SharedMemoryCommand& clientCmd, struct SharedMemoryStatus& serverStatusOut, char* bufferServerToClient, int bufferSizeInBytes)
 {
+
+	//serverCmd.m_type = CMD_CALCULATE_BATCH_FK_COMPLeTED;
+
+    // see btMultiBody.h
 	bool hasStatus = true;
 	BT_PROFILE("CMD_CALCULATE_BATCH_FK");
     printf("hoge");
     int bodyUniqueId = clientCmd.m_calculateBatchFkArguments.m_bodyUniqueId;
-	InternalBodyData* body = m_data->m_bodyHandles.getHandle(bodyUniqueId);
+    int* joint_ids = clientCmd.m_calculateBatchFkArguments.m_joint_ids;
+    double** av_seq = clientCmd.m_calculateBatchFkArguments.m_av_seq;
+    int n_jt = clientCmd.m_calculateBatchFkArguments.m_num_jt;
+    int n_wp = clientCmd.m_calculateBatchFkArguments.m_num_wp;
+
+	InternalBodyData* bodydata = m_data->m_bodyHandles.getHandle(bodyUniqueId);
+    btMultiBody* mb = bodydata->m_multiBody;
+
+    for(int i=0; i<n_jt; i++){
+        mb->setJointPos(joint_ids[i], 0.0);
+    }
+
+    btAlignedObjectArray<btQuaternion> trash;
+    btAlignedObjectArray<btVector3> positions;
+    mb->forwardKinematics(trash, positions);
+
+	SharedMemoryStatus& serverCmd = serverStatusOut;
+	serverCmd.m_type = CMD_CALCULATE_BATCH_FK_COMPLETED;
     return hasStatus;
 }
 

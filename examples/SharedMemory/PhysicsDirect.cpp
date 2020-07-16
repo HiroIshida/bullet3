@@ -1042,6 +1042,11 @@ void PhysicsDirect::postProcessStatus(const struct SharedMemoryStatus& serverCmd
 			break;
 		}
 
+		case CMD_CALCULATE_BATCH_FK_COMPLETED:
+		{
+			break;
+		}
+
 		case CMD_REQUEST_OPENGL_VISUALIZER_CAMERA_COMPLETED:
 		{
 			break;

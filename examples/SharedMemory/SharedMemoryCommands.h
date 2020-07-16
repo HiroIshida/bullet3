@@ -1123,6 +1123,8 @@ struct CalculateBatcFkArgs
 	int m_bodyUniqueId;
     int* m_joint_ids;
     double** m_av_seq;
+    int m_num_jt;
+    int m_num_wp;
 };
 
 struct SharedMemoryCommand
