@@ -12090,7 +12090,7 @@ static PyObject* pybullet_calculateMassMatrix(PyObject* self, PyObject* args, Py
 }
 
 
-static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* keywds)
+static PyObject* pybullet_computeBatchFK(PyObject* self, PyObject* args, PyObject* keywds)
 {
     int bodyUniqueId;
     PyObject *joint_index_list_py;
@@ -12171,7 +12171,7 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
 
 
 static PyMethodDef SpamMethods[] = {
-    {"planpath", (PyCFunction)pybullet_planPath, METH_VARARGS | METH_KEYWORDS,
+    {"computeBatchFK", (PyCFunction)pybullet_computeBatchFK, METH_VARARGS | METH_KEYWORDS,
        "python interface to rrt"},
 
 	{"connect", (PyCFunction)pybullet_connectPhysicsServer, METH_VARARGS | METH_KEYWORDS,
