@@ -12147,6 +12147,18 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     }
     //double*** pts = serverCmd->m_calculateBatchFkResultArgs.collision_pts;
     b3GetStatusCalculateBatchFk(statusHandle, pts, n_wp, n_jt);
+    PyObject* pts_py = PyTuple_New(n_wp);
+    for(int i=0; i<n_wp; i++){
+        PyObject* pts_inner = PyTuple_New(n_jt);
+        for(int j=0; j<n_jt; j++){
+            PyObject* pts_inner_inner = PyTuple_New(3);
+            for(int k=0; k<3; k++){
+                PyTuple_SetItem(pts_inner_inner, k, PyFloat_FromDouble(pts[i][j][k]));
+            }
+            PyTuple_SetItem(pts_inner, j, pts_inner_inner);
+        }
+        PyTuple_SetItem(pts_py, i, pts_inner);
+    }
 
     free(joint_index_list);
     for(int i=0; i<n_wp; i++){
@@ -12155,8 +12167,7 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
     free(av_list);
     free(pts);
     
-	Py_INCREF(Py_None);
-	return Py_None;
+    return pts_py;
 
 }
 
