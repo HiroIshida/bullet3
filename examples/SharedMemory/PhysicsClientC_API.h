@@ -453,7 +453,7 @@ extern "C"
 	B3_SHARED_API void b3SetCollisionFilterGroupMask(b3SharedMemoryCommandHandle commandHandle, int bodyUniqueIdA,
 													 int linkIndexA, int collisionFilterGroup, int collisionFilterMask);
 
-    B3_SHARED_API int b3GetStatusCalculateBatchFk(b3SharedMemoryStatusHandle statusHandle, double*** pts, int n_wp, int n_jt);
+    B3_SHARED_API int b3GetStatusCalculateBatchFk(b3SharedMemoryStatusHandle statusHandle, double**** pts, int n_wp, int n_jt);
     B3_SHARED_API b3SharedMemoryCommandHandle b3CalculateBatchFkInit(b3PhysicsClientHandle physClient, int m_bodyUniqueId, int* m_joint_ids, double** av_seq, int n_jt, int n_wp);
 	B3_SHARED_API b3SharedMemoryCommandHandle b3LoadSdfCommandInit(b3PhysicsClientHandle physClient, const char* sdfFileName);
 	B3_SHARED_API b3SharedMemoryCommandHandle b3LoadSdfCommandInit2(b3SharedMemoryCommandHandle commandHandle, const char* sdfFileName);

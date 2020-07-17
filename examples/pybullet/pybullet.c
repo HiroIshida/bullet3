@@ -12136,17 +12136,8 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
 	b3SharedMemoryCommandHandle commandHandle;
     commandHandle = b3CalculateBatchFkInit(sm, bodyUniqueId, joint_index_list, av_list, n_jt, n_wp);
     b3SharedMemoryStatusHandle statusHandle = b3SubmitClientCommandAndWaitStatus(sm, commandHandle);
-
-
-    double*** pts = (double***)malloc(n_wp * sizeof(double**));
-    for(int i=0; i<n_wp; i++){
-        pts[i] = (double**)malloc(n_jt * sizeof(double*));
-        for(int j=0; j<n_jt; j++){
-            pts[i][j] = (double*)malloc(3 * sizeof(double));
-        }
-    }
-    //double*** pts = serverCmd->m_calculateBatchFkResultArgs.collision_pts;
-    b3GetStatusCalculateBatchFk(statusHandle, pts, n_wp, n_jt);
+    double*** pts;
+    b3GetStatusCalculateBatchFk(statusHandle, &pts, n_wp, n_jt);
     PyObject* pts_py = PyTuple_New(n_wp);
     for(int i=0; i<n_wp; i++){
         PyObject* pts_inner = PyTuple_New(n_jt);

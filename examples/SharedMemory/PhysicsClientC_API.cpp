@@ -28,18 +28,11 @@ B3_SHARED_API b3SharedMemoryCommandHandle b3CalculateBatchFkInit(b3PhysicsClient
 	return (b3SharedMemoryCommandHandle)command;
 }
 
-B3_SHARED_API int b3GetStatusCalculateBatchFk(b3SharedMemoryStatusHandle statusHandle, double*** pts, int n_wp, int n_jt)
+B3_SHARED_API int b3GetStatusCalculateBatchFk(b3SharedMemoryStatusHandle statusHandle, double**** pts, int n_wp, int n_jt)
 {
-	const SharedMemoryStatus* status = (const SharedMemoryStatus*)statusHandle;
+	SharedMemoryStatus* status = (SharedMemoryStatus*)statusHandle;// remove const
 	b3Assert(status);
-    for(int i=1; i<n_wp; i++){
-        for(int j=1; j<n_jt; j++){
-            for(int k=1; k<3; k++){
-                pts[i][j][k] = status->m_calculateBatchFkResultArgs.collision_pts[i][j][k];
-            }
-        }
-    }
-    free(status->m_calculateBatchFkResultArgs.collision_pts);
+    *pts = status->m_calculateBatchFkResultArgs.collision_pts;
     return 1; // tekitou
 }
 

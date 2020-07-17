@@ -13349,12 +13349,13 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
     btMultiBody* mb = bodydata->m_multiBody;
 	SharedMemoryStatus& serverCmd = serverStatusOut;
 
+    
     serverCmd.m_calculateBatchFkResultArgs.collision_pts = (double***)malloc(n_wp * sizeof(double**));
-    double*** pts = serverCmd.m_calculateBatchFkResultArgs.collision_pts;
+    double**** pts = &serverCmd.m_calculateBatchFkResultArgs.collision_pts;
     for(int i=0; i<n_wp; i++){
-        pts[i] = (double**)malloc(n_jt * sizeof(double*));
+        (*pts)[i] = (double**)malloc(n_jt * sizeof(double*));
         for(int j=0; j<n_jt; j++){
-            pts[i][j] = (double*)malloc(3 * sizeof(double));
+            (*pts)[i][j] = (double*)malloc(3 * sizeof(double));
         }
     }
 
@@ -13373,7 +13374,7 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
             int link_id = joint_id + 1;
 
             for(int k=0; k<3; k++){
-                pts[i][j][k] = positions[link_id][k];
+                (*pts)[i][j][k] = positions[link_id][k];
             }
         }
     }
