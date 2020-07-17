@@ -12100,7 +12100,7 @@ static PyObject* pybullet_computeBatchFK(PyObject* self, PyObject* args, PyObjec
 
     b3PhysicsClientHandle sm = 0;
 
-    static char* kwlist[] = {"bodyUniqueId", "jointIndexList", "AngleVectorList", NULL};
+    static char* kwlist[] = {"bodyUniqueId", "jointIndexList", "AngleVectorList", "physicsClientId", NULL};
     PyArg_ParseTupleAndKeywords(args, keywds, "iOO|i", kwlist, 
             &bodyUniqueId, 
             &joint_index_list_py, 
