@@ -12156,6 +12156,12 @@ static PyObject* pybullet_planPath(PyObject* self, PyObject* args, PyObject* key
         free(av_list[i]);
     }
     free(av_list);
+    for(int i=0; i<n_wp; i++){
+        for(int j=0; j<n_jt; j++){
+            free(pts[i][j]);
+        }
+        free(pts[i]);
+    }
     free(pts);
     
     return pts_py;
