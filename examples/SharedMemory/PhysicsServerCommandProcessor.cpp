@@ -13338,7 +13338,6 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
     // see btMultiBody.h
 	bool hasStatus = true;
 	BT_PROFILE("CMD_CALCULATE_BATCH_FK");
-    printf("hoge");
     int bodyUniqueId = clientCmd.m_calculateBatchFkArguments.m_bodyUniqueId;
     int* joint_ids = clientCmd.m_calculateBatchFkArguments.m_joint_ids;
     double** av_seq = clientCmd.m_calculateBatchFkArguments.m_av_seq;
@@ -13364,7 +13363,8 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
         // forward kinematics
         for(int j=0; j<n_jt; j++){
             double angle = av[j];
-            mb->setJointPos(joint_ids[j], angle);
+            // as for 7, see imprementation of b3CreatePoseCommandSetJointPositions
+            mb->setJointPos(7 + joint_ids[j], angle); 
         }
         btAlignedObjectArray<btQuaternion> trash;
         btAlignedObjectArray<btVector3> positions;
@@ -13372,9 +13372,10 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
         for(int j=0; j<n_jt; j++){
             int joint_id = joint_ids[j];
             int link_id = joint_id + 1;
+            int link_id_wtf = link_id + 1; // sorry man I DON'T know why I need + 1 here, but somehow works fine becaues of that.
 
             for(int k=0; k<3; k++){
-                (*pts)[i][j][k] = positions[link_id][k];
+                (*pts)[i][j][k] = positions[link_id_wtf][k];
             }
         }
     }
