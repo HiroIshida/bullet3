@@ -3,6 +3,7 @@
 #include "../SharedMemory/PhysicsClientC_API.h"
 #include "../SharedMemory/PhysicsDirectC_API.h"
 #include "../SharedMemory/SharedMemoryInProcessPhysicsC_API.h"
+#include<string.h> 
 #ifdef BT_ENABLE_ENET
 #include "../SharedMemory/PhysicsClientUDP_C_API.h"
 #endif  //BT_ENABLE_ENET
@@ -12108,6 +12109,17 @@ static PyObject* pybullet_computeBatchFK(PyObject* self, PyObject* args, PyObjec
 
     sm = getPhysicsClient(physicsClientId);
 
+    const char* type_av_list_py = Py_TYPE(av_list_py)->tp_name;
+    if(strcmp(type_av_list_py, "tuple")!=0){
+        PyErr_SetString(PyExc_ValueError, "[HIRO] provided av_list_py is not tuple.");
+        return NULL;
+    }
+
+    const char* type_joint_index_list_py = Py_TYPE(joint_index_list_py)->tp_name;
+    if(strcmp(type_joint_index_list_py, "tuple")!=0){
+        PyErr_SetString(PyExc_ValueError, "[HIRO] provided joint_index_list is not tuple.");
+        return NULL;
+    }
 
     int n_wp = PySequence_Size(av_list_py);
     int n_jt = PySequence_Size(joint_index_list_py);
