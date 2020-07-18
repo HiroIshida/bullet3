@@ -13364,7 +13364,7 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
         for(int j=0; j<n_jt; j++){
             double angle = av[j];
             // as for 7, see imprementation of b3CreatePoseCommandSetJointPositions
-            mb->setJointPos(7 + joint_ids[j], angle); 
+            mb->setJointPos(joint_ids[j], angle); 
         }
         btAlignedObjectArray<btQuaternion> trash;
         btAlignedObjectArray<btVector3> positions;

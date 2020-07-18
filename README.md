@@ -1,10 +1,8 @@
 # Ishida modification
 added computeBatchFK. There are potential 
 1. strange +1 operation when extracting link position
-2. strange +6 operation when setting joint state
-3. currently tuple must have at least two angle vectors. I mean `((0, 0, 0), (0, 0, 0))` is ok but somehow `((0, 0, 0))` is not ok (raise dimension mismatch error).
-4. currently only tuple input is accepted. must be upgraded to accept also list and numpy.
-
+2. currently tuple must have at least two angle vectors. I mean `((0, 0, 0), (0, 0, 0))` is ok but somehow `((0, 0, 0))` is not ok (raise dimension mismatch error).
+3. currently only tuple input is accepted. must be upgraded to accept also list and numpy.
 
 [![Travis Build Status](https://api.travis-ci.org/bulletphysics/bullet3.png?branch=master)](https://travis-ci.org/bulletphysics/bullet3)
 [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/6sly9uxajr6xsstq)](https://ci.appveyor.com/project/erwincoumans/bullet3)
