@@ -13340,9 +13340,11 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
 	BT_PROFILE("CMD_CALCULATE_BATCH_FK");
     int bodyUniqueId = clientCmd.m_calculateBatchFkArguments.m_bodyUniqueId;
     int* joint_ids = clientCmd.m_calculateBatchFkArguments.m_joint_ids;
+    int* col_ids = clientCmd.m_calculateBatchFkArguments.m_col_ids;
     double** av_seq = clientCmd.m_calculateBatchFkArguments.m_av_seq;
     int n_jt = clientCmd.m_calculateBatchFkArguments.m_num_jt;
     int n_wp = clientCmd.m_calculateBatchFkArguments.m_num_wp;
+    int n_col = clientCmd.m_calculateBatchFkArguments.m_num_col;
 
 	InternalBodyData* bodydata = m_data->m_bodyHandles.getHandle(bodyUniqueId);
     btMultiBody* mb = bodydata->m_multiBody;
@@ -13369,9 +13371,8 @@ bool PhysicsServerCommandProcessor::processCalculateBatckFkCommand(const struct 
         btAlignedObjectArray<btQuaternion> trash;
         btAlignedObjectArray<btVector3> positions;
         mb->forwardKinematics(trash, positions);
-        for(int j=0; j<n_jt; j++){
-            int joint_id = joint_ids[j];
-            int link_id = joint_id + 1;
+        for(int j=0; j<n_col; j++){
+            int link_id = col_ids[j];
             int link_id_wtf = link_id + 1; // sorry man I DON'T know why I need + 1 here, but somehow works fine becaues of that.
 
             for(int k=0; k<3; k++){

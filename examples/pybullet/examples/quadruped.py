@@ -126,7 +126,7 @@ kp = 1
 kd = .5
 maxKneeForce = 1000
 
-physId = p.connect(p.SHARED_MEMORY_GUI)
+physId = p.connect(p.GUI)
 if (physId < 0):
   p.connect(p.GUI)
 #p.resetSimulation()

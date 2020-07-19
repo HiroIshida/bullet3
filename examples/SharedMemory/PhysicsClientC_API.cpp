@@ -9,7 +9,7 @@
 #include <string.h>
 #include "SharedMemoryCommands.h"
 
-B3_SHARED_API b3SharedMemoryCommandHandle b3CalculateBatchFkInit(b3PhysicsClientHandle physClient, int m_bodyUniqueId, int* m_joint_ids, double** av_seq, int n_jt, int n_wp)
+B3_SHARED_API b3SharedMemoryCommandHandle b3CalculateBatchFkInit(b3PhysicsClientHandle physClient, int m_bodyUniqueId, int* m_joint_ids, double** av_seq, int* col_list, int n_jt, int n_wp, int n_col)
 {
 	PhysicsClient* cl = (PhysicsClient*)physClient;
 	b3Assert(cl);
@@ -22,13 +22,15 @@ B3_SHARED_API b3SharedMemoryCommandHandle b3CalculateBatchFkInit(b3PhysicsClient
     command->m_updateFlags = 0;
     command->m_calculateBatchFkArguments.m_bodyUniqueId = m_bodyUniqueId;
     command->m_calculateBatchFkArguments.m_joint_ids = m_joint_ids;
+    command->m_calculateBatchFkArguments.m_col_ids = col_list;
     command->m_calculateBatchFkArguments.m_av_seq = av_seq;
     command->m_calculateBatchFkArguments.m_num_wp = n_wp;
     command->m_calculateBatchFkArguments.m_num_jt = n_jt;
+    command->m_calculateBatchFkArguments.m_num_col = n_col;
 	return (b3SharedMemoryCommandHandle)command;
 }
 
-B3_SHARED_API int b3GetStatusCalculateBatchFk(b3SharedMemoryStatusHandle statusHandle, double**** pts, int n_wp, int n_jt)
+B3_SHARED_API int b3GetStatusCalculateBatchFk(b3SharedMemoryStatusHandle statusHandle, double**** pts)
 {
 	SharedMemoryStatus* status = (SharedMemoryStatus*)statusHandle;// remove const
 	b3Assert(status);

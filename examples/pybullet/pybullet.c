@@ -12096,43 +12096,63 @@ static PyObject* pybullet_computeBatchFK(PyObject* self, PyObject* args, PyObjec
     int bodyUniqueId;
     PyObject *joint_index_list_py;
     PyObject *av_list_py; 
+    PyObject *col_list_py; 
     int physicsClientId = 0;
 
     b3PhysicsClientHandle sm = 0;
 
-    static char* kwlist[] = {"bodyUniqueId", "jointIndexList", "AngleVectorList", "physicsClientId", NULL};
-    PyArg_ParseTupleAndKeywords(args, keywds, "iOO|i", kwlist, 
+    static char* kwlist[] = {"bodyUniqueId", "jointIndexList", "AngleVectorList", "collisionBodyList", "physicsClientId", NULL};
+    PyArg_ParseTupleAndKeywords(args, keywds, "iOOO|i", kwlist, 
             &bodyUniqueId, 
             &joint_index_list_py, 
             &av_list_py, 
+            &col_list_py,
             &physicsClientId);
 
     sm = getPhysicsClient(physicsClientId);
 
+    // TODO cleaner 
     const char* type_av_list_py = Py_TYPE(av_list_py)->tp_name;
     if(strcmp(type_av_list_py, "tuple")!=0){
         PyErr_SetString(PyExc_ValueError, "[HIRO] provided av_list_py is not tuple.");
         return NULL;
     }
 
+    // TODO cleaner 
     const char* type_joint_index_list_py = Py_TYPE(joint_index_list_py)->tp_name;
     if(strcmp(type_joint_index_list_py, "tuple")!=0){
         PyErr_SetString(PyExc_ValueError, "[HIRO] provided joint_index_list is not tuple.");
         return NULL;
     }
 
+    // TODO cleaner 
+    const char* type_col_list_py = Py_TYPE(col_list_py)->tp_name;
+    if(strcmp(type_col_list_py, "tuple")!=0){
+        PyErr_SetString(PyExc_ValueError, "[HIRO] provided col_list is not tuple.");
+        return NULL;
+    }
+
     int n_wp = PySequence_Size(av_list_py);
     int n_jt = PySequence_Size(joint_index_list_py);
-    int n_jt_ = PySequence_Size(PyTuple_GetItem(av_list_py, 0));
+    int n_col = PySequence_Size(col_list_py);
+    //int n_jt_ = PySequence_Size(PyTuple_GetItem(av_list_py, 0));
+    /*
     if(n_jt_!=n_jt){
         PyErr_SetString(PyExc_ValueError, "[HIRO] dimension mismatch");
         return NULL;
     }
+    */
 
     int* joint_index_list = (int*)malloc(n_jt * sizeof(int));
     for(int i=0; i<n_jt; i++){
         joint_index_list[i] = (int)PyLong_AsLong(PyTuple_GetItem(joint_index_list_py, i));
     }
+
+    int* col_list = (int*)malloc(n_col * sizeof(int));
+    for(int i=0; i<n_jt; i++){
+        col_list[i] = (int)PyLong_AsLong(PyTuple_GetItem(col_list_py, i));
+    }
+
 
     double** av_list = (double**)malloc(n_wp * sizeof(double*));
     for(int i=0; i<n_wp; i++){ 
@@ -12145,15 +12165,15 @@ static PyObject* pybullet_computeBatchFK(PyObject* self, PyObject* args, PyObjec
             av_list[i][j] = PyFloat_AsDouble(PyTuple_GetItem(av_py, j));
         }
     }
-	b3SharedMemoryCommandHandle commandHandle;
-    commandHandle = b3CalculateBatchFkInit(sm, bodyUniqueId, joint_index_list, av_list, n_jt, n_wp);
+    b3SharedMemoryCommandHandle commandHandle;
+    commandHandle = b3CalculateBatchFkInit(sm, bodyUniqueId, joint_index_list, av_list, col_list, n_jt, n_wp, n_col);
     b3SharedMemoryStatusHandle statusHandle = b3SubmitClientCommandAndWaitStatus(sm, commandHandle);
     double*** pts;
-    b3GetStatusCalculateBatchFk(statusHandle, &pts, n_wp, n_jt);
+    b3GetStatusCalculateBatchFk(statusHandle, &pts);
     PyObject* pts_py = PyTuple_New(n_wp);
     for(int i=0; i<n_wp; i++){
         PyObject* pts_inner = PyTuple_New(n_jt);
-        for(int j=0; j<n_jt; j++){
+        for(int j=0; j<n_col; j++){
             PyObject* pts_inner_inner = PyTuple_New(3);
             for(int k=0; k<3; k++){
                 PyTuple_SetItem(pts_inner_inner, k, PyFloat_FromDouble(pts[i][j][k]));
@@ -12164,6 +12184,7 @@ static PyObject* pybullet_computeBatchFK(PyObject* self, PyObject* args, PyObjec
     }
 
     free(joint_index_list);
+    free(col_list);
     for(int i=0; i<n_wp; i++){
         free(av_list[i]);
     }
